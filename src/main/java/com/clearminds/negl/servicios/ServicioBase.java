@@ -7,19 +7,19 @@ import com.clearminds.ngl.bdd.ConexionBDD;
 import com.clearminds.ngl.excepciones.BDDException;
 
 public class ServicioBase {
-	private Connection conn;
+	private Connection conexion;
 
-	public Connection getConn() {
-		return conn;
+	public Connection getConexion() {
+		return conexion;
 	}
 
-	public void setConn(Connection conn) {
-		this.conn = conn;
+	public void setConexion(Connection conn) {
+		this.conexion = conn;
 	}
 
 	public void abrirConexion() throws BDDException {
 		try {
-			conn = ConexionBDD.obtenerConexion();
+			conexion = ConexionBDD.obtenerConexion();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,8 +31,8 @@ public class ServicioBase {
 
 	public void cerrarConexion() {
 		try {
-			if (conn != null) {
-				conn.close();
+			if (conexion != null) {
+				conexion.close();
 				System.out.println("Conexion cerrada...");
 			}
 		} catch (SQLException e) {

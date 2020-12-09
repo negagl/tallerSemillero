@@ -9,7 +9,7 @@ public class TestServicio {
 		// TODO Auto-generated method stub
 		ServicioEstudiante srvEstudiante = new ServicioEstudiante();
 		try{
-			srvEstudiante.insertarEstudiante(new Estudiante("Juan", "Perez"));
+			srvEstudiante.insertarEstudiante(new Estudiante("Enrique", "Lopez"));
 		}catch(BDDException e){
 			e.printStackTrace();
 			e.getMessage();
